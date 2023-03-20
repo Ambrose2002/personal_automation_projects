@@ -1,0 +1,81 @@
+mass_hydrogen=int(1)
+mass_oxygen=int(16)
+mass_nitrogen=int(14)
+mass_carbon=int(12)
+mass_sulfur=int(32)
+mass_sodium=int(23)
+mass_aluminium=int(27)
+mass_phosphorus=int(31)
+mass_magnesium=int(24)
+mass_calcium=int(40)
+mass_potassium=int(39)
+mass_chlorine=int(35.5)
+for i in range(30):
+    print('This is a program for calculating the percentage composition of an organic compound')
+    compound=input('Compound: ')
+    n_carbon_atoms=int(input('number of carbon atoms: '))
+    n_hydrogen_atoms=int(input('number of hydrogen atoms: '))
+    n_oxygen_atoms=int(input('number of oxygen atoms: '))
+    n_nitrogen_atoms=int(input('number of nitrogen atoms: '))
+    n_sulfur_atoms=int(input('number of sulfur atoms: '))
+    n_sodium_atoms=int(input('number of sodium atoms: '))
+    n_aluminium_atoms=int(input('number of aluminium atoms: '))
+    n_phosphorus_atoms=int(input('number of phosphorus atoms: '))
+    n_magnesium_atoms=int(input('number of magnesium atoms: '))
+    n_calcium_atoms=int(input('number of calcium atoms: '))
+    n_potassium_atoms=int(input('number of potassium atoms: '))
+    n_chlorine_atoms=int(input('number of chlorine atoms: '))
+    mass_per_mole_carbon=mass_carbon*n_carbon_atoms
+    mass_per_mole_hydrogen=mass_hydrogen*n_hydrogen_atoms
+    mass_per_mole_oxygen=mass_oxygen*n_oxygen_atoms
+    mass_per_mole_nitrogen=mass_nitrogen*n_nitrogen_atoms
+    mass_per_mole_sulfur=mass_sulfur*n_sulfur_atoms
+    mass_per_mole_sodium=mass_sodium*n_sodium_atoms
+    mass_per_mole_aluminium=mass_aluminium*n_aluminium_atoms
+    mass_per_mole_phosphorus=mass_phosphorus*n_phosphorus_atoms
+    mass_per_mole_magnesium=mass_magnesium*n_magnesium_atoms
+    mass_per_mole_calcium=mass_calcium*n_calcium_atoms
+    mass_per_mole_potassium=mass_potassium*n_potassium_atoms
+    mass_per_mole_chlorine=mass_chlorine*n_chlorine_atoms
+    molar_mass_compound=mass_per_mole_carbon+mass_per_mole_hydrogen+mass_per_mole_oxygen+mass_per_mole_nitrogen+mass_per_mole_sulfur+mass_per_mole_sodium+mass_per_mole_aluminium+mass_per_mole_phosphorus+mass_per_mole_magnesium+mass_per_mole_calcium+mass_per_mole_potassium+mass_per_mole_chlorine
+    
+
+    percent_carbon=((mass_per_mole_carbon/molar_mass_compound)*100)
+    percent_hydrogen=(mass_per_mole_hydrogen/molar_mass_compound)*100
+    percent_oxygen=(mass_per_mole_oxygen/molar_mass_compound)*100
+    percent_nitrogen=(mass_per_mole_nitrogen/molar_mass_compound)*100
+    percent_sulfur=(mass_per_mole_sulfur/molar_mass_compound)*100
+    percent_sodium=(mass_per_mole_sodium/molar_mass_compound)*100
+    percent_aluminium=(mass_per_mole_aluminium/molar_mass_compound)*100
+    percent_phosphorus=(mass_per_mole_phosphorus/molar_mass_compound)*100
+    percent_magnesium=(mass_per_mole_magnesium/molar_mass_compound)*100
+    percent_calcium=(mass_per_mole_calcium/molar_mass_compound)*100
+    percent_potassium=(mass_per_mole_potassium/molar_mass_compound)*100
+    percent_chlorine=(mass_per_mole_chlorine/molar_mass_compound)*100
+    #print('carbon= {:.2f} %' .format(percent_carbon))
+    #print('hydrogen= {:.2f} %' .format(percent_hydrogen))
+    #print('oxygen= {:.2f} %' .format(percent_oxygen))
+    #print('nitrogen= {:.2f} %' .format(percent_nitrogen))
+    #print('sodium= {:.2f} %' .format(percent_sodium))
+    #print('sulfur= {:.2f} %' .format(percent_sulfur))
+    #print('aluminium= {:.2f} %' .format(percent_aluminium))
+    #print('phosphorus= {:.2f} %' .format(percent_phosphorus))
+    #print('magnesium= {:.2f} %' .format(percent_magnesium))
+    #print('calcium= {:.2f} %' .format(percent_calcium))
+    #print('potassium= {:.2f} %' .format(percent_potassium))
+
+    f = open ('percentage', 'a')
+    f.write('\nCOMPOUND: {}'.format(compound))
+    f.write('\n carbon= {:.2f} % '.format(percent_carbon))
+    f.write('\n hydrogen= {:.2f} %' .format(percent_hydrogen))
+    f.write('\n oxygen= {:.2f} %' .format(percent_oxygen))
+    f.write('\n nitrogen= {:.2f} %' .format(percent_nitrogen))
+    f.write('\n sodium= {:.2f} %' .format(percent_sodium))
+    f.write('\n sulfur= {:.2f} %' .format(percent_sulfur))
+    f.write('\n aluminium= {:.2f} %' .format(percent_aluminium))
+    f.write('\n phosphorus= {:.2f} %' .format(percent_phosphorus))
+    f.write('\n magnesium= {:.2f} %' .format(percent_magnesium))
+    f.write('\n calcium= {:.2f} %' .format(percent_calcium))
+    f.write('\n potassium= {:.2f} %' .format(percent_potassium))
+    f.write('\n chlorine= {:.2f} %' .format(percent_chlorine))
+    f.write('\n ')
